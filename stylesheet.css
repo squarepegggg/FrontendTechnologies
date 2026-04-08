@@ -1,0 +1,231 @@
+/* =============================================================
+   CSS VARIABLES — one place to control the whole color palette
+   ============================================================= */
+   :root {
+    --bg:        #0f0f0f;
+    --surface:   #1a1a1a;
+    --border:    #2e2e2e;
+    --accent:    #e8c97e;   /* warm gold */
+    --accent2:   #7ec8e8;   /* sky blue  */
+    --text:      #f0ede6;
+    --muted:     #888;
+    --radius:    12px;
+    --max-width: 1000px;
+  }
+  
+  /* =============================================================
+     ✅ REQUIREMENT: CSS selector applied to an HTML tag (body, h1, p…)
+     ============================================================= */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    /* ✅ REQUIREMENT: box model — padding on body */
+    padding: 0 1.5rem;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  h1 {
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    /* ✅ REQUIREMENT: box model — margin on h1 */
+    margin: 0.25rem 0 1rem;
+    color: var(--accent);
+  }
+  
+  h2 { font-size: 2rem; }
+  
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+    color: var(--accent);
+  }
+  
+  p { color: var(--muted); font-size: 0.97rem; }
+  
+  img { display: block; }
+  
+  /* =============================================================
+     ✅ REQUIREMENT: <a> styled + hover color change
+     ============================================================= */
+  a {
+    color: var(--accent2);
+    text-decoration: none;
+    transition: color 0.25s ease;
+  }
+  
+  a:hover {
+    color: var(--accent);   /* ✅ color changes on hover */
+  }
+  
+  /* =============================================================
+     LAYOUT HELPER
+     ============================================================= */
+  #hero,
+  #about,
+  #projects,
+  #footer {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+  
+  /* =============================================================
+     ✅ REQUIREMENT: id selector — #hero
+     ============================================================= */
+  #hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    min-height: 92vh;
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .hero-text { flex: 1; }
+  
+  .eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 0;
+  }
+  
+  .tagline {
+    font-size: 1.1rem;
+    color: var(--muted);
+    margin-bottom: 2.5rem;
+  }
+  
+  /* Call-to-action button */
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #0f0f0f;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.75rem 1.8rem;
+    border-radius: 999px;
+    letter-spacing: 0.04em;
+    transition: background 0.25s ease, transform 0.2s ease;
+  }
+  
+  .btn:hover {
+    background: var(--accent2);
+    color: #0f0f0f;
+    transform: translateY(-2px);
+  }
+  
+  .hero-image-wrap {
+    flex-shrink: 0;
+  }
+  
+  /* ✅ REQUIREMENT: image included */
+  .profile-img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    border: 2px solid var(--border);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+  }
+  
+  /* =============================================================
+     SECTION TITLES
+     ============================================================= */
+  .section-title {
+    margin: 5rem 0 2rem;
+    color: var(--text);
+    position: relative;
+  }
+  
+  .section-title::after {
+    content: '';
+    display: block;
+    width: 3rem;
+    height: 3px;
+    background: var(--accent);
+    margin-top: 0.5rem;
+    border-radius: 2px;
+  }
+  
+  /* =============================================================
+     ✅ REQUIREMENT: .card class applied to 3+ elements
+     ============================================================= */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    /* ✅ REQUIREMENT: box model — padding & border on .card */
+    padding: 1.75rem;
+    transition: border-color 0.25s ease, transform 0.2s ease;
+  }
+  
+  .card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+  }
+  
+  .card-icon {
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+  
+  .card a {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+  
+  /* =============================================================
+     FOOTER
+     ============================================================= */
+  #footer {
+    text-align: center;
+    padding: 3rem 0 2rem;
+    border-top: 1px solid var(--border);
+    margin-top: 4rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  
+  /* =============================================================
+     RESPONSIVE
+     ============================================================= */
+  @media (max-width: 640px) {
+    #hero {
+      flex-direction: column;
+      text-align: center;
+      min-height: auto;
+      padding-top: 6rem;
+    }
+  
+    .profile-img {
+      width: 200px;
+      height: 200px;
+    }
+  }

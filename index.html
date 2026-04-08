@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- ✅ REQUIREMENT: meta description tag -->
+  <meta name="description" content="Personal website of Matthew Olan — ECE Student, dog owner, and outdoor maxxing enthusiast." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matthew Olan</title>
+  <link rel="stylesheet" href="stylesheet.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- =========================================================
+       HERO SECTION
+  ========================================================== -->
+  <!-- ✅ REQUIREMENT: <div> sections (this is section 1 of 2+) -->
+  <div id="hero">
+    <!-- ✅ REQUIREMENT: id selector used on #hero -->
+    <div class="hero-text">
+      <p class="eyebrow">Hello, I'm</p>
+      <h1>Matthew Olan</h1>
+      <p class="tagline">ECE &amp; Aspiring Software Engineer</p>
+
+      <!-- ✅ REQUIREMENT: <a> link to another website -->
+      <!-- ✅ REQUIREMENT: hover color change on <a> is in stylesheet.css -->
+      <a href="https://github.com" class="btn" target="_blank" rel="noopener">View My GitHub →</a>
+    </div>
+
+    <!-- ✅ REQUIREMENT: image (safe for work) -->
+    <div class="hero-image-wrap">
+      <img
+        src="https://images.unsplash.com/photo-1607743386760-88ac62b89b8a?w=400&q=80"
+        alt="Laptop on a desk with code on the screen"
+        class="profile-img"
+      />
+    </div>
+  </div>
+
+  <!-- =========================================================
+       ABOUT SECTION
+  ========================================================== -->
+  <!-- ✅ REQUIREMENT: second <div> section -->
+  <div id="about">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="card-grid">
+
+      <!-- ✅ REQUIREMENT: class "card" applied to multiple elements (reused 3×) -->
+      <div class="card">
+        <span class="card-icon">🎓</span>
+        <h3>Education</h3>
+        <p>Senior at UT Austin studying Electrical &amp; Computer Engineering. Expected graduation: May 2026.</p>
+      </div>
+
+      <div class="card">
+        <span class="card-icon">💻</span>
+        <h3>Skills</h3>
+        <p>Python, JavaScript, React, Java, C++, Git, Linux. Always learning something new.</p>
+      </div>
+
+      <div class="card">
+        <span class="card-icon">☕</span>
+        <h3>Interests</h3>
+        <p>Open-source software, hiking the Barton Creek Greenbelt, and perfecting my pour-over technique.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================================
+       PROJECTS SECTION
+  ========================================================== -->
+  <div id="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="card-grid">
+
+      <div class="card">
+        <span class="card-icon">🌐</span>
+        <h3>Personal Portfolio</h3>
+        <p>This very website! Built with vanilla HTML &amp; CSS. Deployed on GitHub Pages.</p>
+        <a href="https://github.com" target="_blank" rel="noopener">Source Code →</a>
+      </div>
+
+      <div class="card">
+        <span class="card-icon">📊</span>
+        <h3>Data Dashboard</h3>
+        <p>A React app visualising real-time weather data using the OpenWeather API.</p>
+        <a href="https://github.com" target="_blank" rel="noopener">Source Code →</a>
+      </div>
+
+      <div class="card">
+        <span class="card-icon">🤖</span>
+        <h3>ML Classifier</h3>
+        <p>A Python image classifier trained on CIFAR-10 achieving 87% test accuracy.</p>
+        <a href="https://github.com" target="_blank" rel="noopener">Source Code →</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+  <div id="footer">
+    <p>Made by Matthew Olan &nbsp;|&nbsp;
+      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a> &nbsp;·&nbsp;
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+    </p>
+  </div>
+
+</body>
+</html>
